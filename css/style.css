@@ -1,0 +1,259 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff05;
+  color: #000;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(105, 105, 105, 0.1);
+  border-radius: 20px 20px 20px 20px;
+  margin: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #afafaf;
+}
+
+/* Style untuk tombol hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Style untuk menu navigasi */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsif: Sembunyikan menu pada layar kecil dan tampilkan hamburger */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 80%;
+    margin: 30px 30px;
+    padding: 30px 30px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Style untuk menu link */
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+  }
+}
+
+.slider-img {
+  width: 70%; 
+  max-width: 300px;
+  height: auto; 
+  display: block;
+  margin: 0 auto;
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6rem 2rem;
+  color: white;
+}
+
+#intro h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+#intro a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #8d8d8d;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#intro a:hover {
+  background-color: #8d8d8d;
+}
+
+.hero {
+  background: url("/images/f3.png") no-repeat center center/cover;
+  height: 100vh;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #8d8d8d;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #cacaca;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 500px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
